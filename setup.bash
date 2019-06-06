@@ -65,6 +65,7 @@ npm set init.description 'Fresh set up of the Pixelarity Standout template for a
 cd standout && npm init --yes && npm install && echo [$0] application initialized and essential node modules installed.
 npm install --save-dev nodemon && echo [$0] nodemon installed as a developer dependency.
 npm install --save-dev s3-cli && echo [$0] s3-cli installed as a developer dependency.
+npm install --save-dev node-sass && echo [$0] node-sass installed as a developer dependency.
 
 # step 7: install template.
 unzip ../standout.zip -d /tmp/standout && mv /tmp/standout/standout . && echo [$0] unzipped template archive.
