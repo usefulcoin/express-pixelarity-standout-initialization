@@ -45,13 +45,13 @@ module.exports = {
     'clean': 'rm -rf dist/*',
     'loadhtml': 'pug views/*.pug --pretty --out dist',
     'loadtherest': 'cp -R public/* dist && cp public/images/favicon.ico dist/',
-    'prebuild': 'yarn run clean',
-    'build:markup': 'yarn run loadhtml',
-    'build:therest': 'yarn run loadtherest',
-    'build': 'yarn run build:therest && yarn run build:markup -s',
+    'prebuild': 'npm run clean',
+    'build:markup': 'npm run loadhtml',
+    'build:therest': 'npm run loadtherest',
+    'build': 'npm run build:therest && npm run build:markup -s',
     'deploy:dev': 's3-cli sync ./dist/ s3://development/',
     'deploy:www': 's3-cli sync ./dist/ s3://production/',
-    'deploy': 'yarn run deploy:dev && yarn run deploy:www',
+    'deploy': 'npm run deploy:dev && npm run deploy:www',
     'start': 'node ./bin/www',
     'devstart': 'nodemon ./bin/www'
   }
