@@ -44,7 +44,7 @@ module.exports = {
   'scripts': {
     'clean': 'rm -rf dist/*',
     'loadhtml': 'pug views/*.pug --pretty --out dist',
-    'loadsass': 'sass public/stylesheets/sass/main.scss public/stylesheets/main.css',
+    'loadsass': 'node-sass public/stylesheets/sass/main.scss public/stylesheets/main.css',
     'loadtherest': 'cp -R public/* dist && cp public/images/favicon.ico dist/',
     'prebuild': 'npm run clean',
     'build:markup': 'npm run loadhtml',
